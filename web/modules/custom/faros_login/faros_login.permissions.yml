@@ -1,0 +1,3 @@
+administer faros_login_company:
+  title: 'Administer companies'
+  restrict access: true

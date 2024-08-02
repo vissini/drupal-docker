@@ -1,0 +1,171 @@
+{#
+/**
+ * @file
+ * Bootstrap Barrio's theme implementation to display a node.
+ *
+ * Available variables:
+ * - node: The node entity with limited access to object properties and methods.
+     Only "getter" methods (method names starting with "get", "has", or "is")
+     and a few common methods such as "id" and "label" are available. Calling
+     other methods (such as node.delete) will result in an exception.
+ * - label: The title of the node.
+ * - content: All node items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - author_picture: The node author user entity, rendered using the "compact"
+ *   view mode.
+ * - metadata: Metadata for this node.
+ * - date: Themed creation date field.
+ * - author_name: Themed author name field.
+ * - url: Direct URL of the current node.
+ * - display_submitted: Whether submission information should be displayed.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - node: The current template type (also known as a "theming hook").
+ *   - node--type-[type]: The current node type. For example, if the node is an
+ *     "Article" it would result in "node--type-article". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
+ *     teaser would result in: "node--view-mode-teaser", and
+ *     full: "node--view-mode-full".
+ *   The following are controlled through the node publishing options.
+ *   - node--promoted: Appears on nodes promoted to the front page.
+ *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
+ *     teaser listings.
+ *   - node--unpublished: Appears on unpublished nodes visible only to site
+ *     admins.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - content_attributes: Same as attributes, except applied to the main
+ *   content tag that appears in the template.
+ * - author_attributes: Same as attributes, except applied to the author of
+ *   the node tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ * - view_mode: View mode; for example, "teaser" or "full".
+ * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
+ * - page: Flag for the full page state. Will be true if view_mode is 'full'.
+ * - readmore: Flag for more state. Will be true if the teaser content of the
+ *   node cannot hold the main body content.
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_node()
+ */
+#}
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {# Banner #}
+    <div class="row text-align-center text-light blue-degrade-background mb-5" style="min-height: 300px;">
+      {% include '@faros_theme_custom/node/solutions/node--solutions-banner.html.twig' %}
+    </div>
+    {% set youtube_url = content.field_video["#items"].entity.get('field_media_oembed_video').value ?? '' %}
+    {% if youtube_url %}
+      <div class="row justify-content-center">
+
+        {% set video_id = youtube_url | split('?v=') | last | split('&') | first %}
+        <div class="ratio ratio-16x9 mb-5" style="max-width:720px;">
+          <iframe src="https://www.youtube.com/embed/{{ video_id }}" allowfullscreen></iframe>
+        </div>
+      </div>
+    {% endif %}
+    <div class="row justify-content-center text-center">
+        <h4 class="fw-bold mb-3">{{ node.field_title_clients.value }}</h4>
+        {% include '@faros_theme_custom/components/slick-clients.html.twig' with {clients: content.field_paragraph_clients } %}
+    </div>
+    <div class="row justify-content-center gray-background pt-5 mb-5">
+      {% include '@faros_theme_custom/node/solutions/node--solutions-eixos-tematicos.html.twig' %}
+    </div>
+    <div class="row justify-content-center mb-5">
+      {% include '@faros_theme_custom/node/solutions/node--solutions-plans.html.twig' %}
+    </div>
+    <div class="row justify-content-center mt-5">
+      {% include '@faros_theme_custom/node/solutions/node--solutions-testimonials.html.twig' %}
+    </div>
+
+    {# Desktop Image #}
+    <div class="row align-items-start d-none d-md-block">
+      {% set desktop_image = content.field_desktop_image %}
+      {% set desktop_image_uri = desktop_image["#items"].entity.get('field_media_image').entity.getFileUri() ?? '' %}
+      {% set desktop_image_url = desktop_image_uri ? file_url(desktop_image_uri) : '' %}
+      {% if desktop_image_url %}
+      <div class="col-12 mb-5 d-flex justify-content-center">
+        <img
+          src="{{ desktop_image_url }}"
+          class="img-fluid rounded-3 w-100"
+          alt="Banner principal"
+        />
+        {# {{ content.field_desktop_image|render|replace({'<img': '<img class="img-fluid"'})|raw}}<br> #}
+      </div>
+      {% endif %}
+    </div>
+    {# Mobile Image #}
+    <div class="row align-items-start d-md-none">
+    {% set mobile_image = content.field_mobile_image %}
+    {% set mobile_image_uri = mobile_image["#items"].entity.get('field_media_image').entity.getFileUri() ?? '' %}
+    {% set mobile_image_url = mobile_image_uri ? file_url(mobile_image_uri) : desktop_image_url %}
+      {# {% if mobile_image_url %} #}
+      <div class="col-12 mb-5 d-flex justify-content-center">
+        <img
+          src="{{ mobile_image_url }}"
+          class="img-fluid rounded-3"
+          alt="Banner principal"
+        />
+      </div>
+      {# {% endif %} #}
+    </div>
+    <div class="row justify-content-center gray-background">
+      <div class="col-12 col-lg-10 col-xl-8">
+        {{ content.body }}
+      </div>
+    </div>
+    <div class="row justify-content-center gray-background">
+      <div class="col-12">
+        {{ content.field_paragraph_session }}
+      </div>
+    </div>
+    {% if content.field_paragraph_teams is not empty %}
+      <div class="row justify-content-center gray-background">
+        <div class="col-12 text-center">
+          <h2>{{ content.field_team_session_title }}</h2>
+        </div>
+        <div class="col-12 text-center mb-4">
+          {{ content.field_team_session_content }}
+        </div>
+      </div>
+        <div class="row gray-background">
+          {% for item in node.field_paragraph_teams %}
+            <div class="col-12 col-md-6 col-lg-3 mb-4">
+              <div class="card h-100">
+                {% set tema_image = item.entity.field_image_team_member.entity.field_media_image.entity.uri %}
+                {% if tema_image.value %}
+                  <img src="{{ file_url(tema_image.value) }}" class="card-img-top" alt="{{ item.entity.field_team_member_name.value }}">
+                {% endif %}
+                <div class="card-body">
+                  <p class="card-title"><b>{{ item.entity.field_team_member_name.value }}</b></p>
+                  <p class="card-text">{{ item.entity.field_team_member_position.value }}</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+    {% endif %}
+</div>

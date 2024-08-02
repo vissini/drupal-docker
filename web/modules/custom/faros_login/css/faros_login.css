@@ -1,0 +1,37 @@
+.progress-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.progress-step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.progress-step .step-number {
+  display: block;
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 2px solid #007BFF;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #007BFF;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.progress-step.active .step-number {
+  background-color: #007BFF;
+  color: #ffffff;
+}
+
+.progress-step .step-title {
+  display: block;
+  margin-top: 5px;
+}

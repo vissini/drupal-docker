@@ -1,0 +1,19 @@
+uuid: 185911ab-573f-4113-9f1d-9e3be1caab36
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_why_faros_title
+    - node.type.home_page
+id: node.home_page.field_why_faros_title
+field_name: field_why_faros_title
+entity_type: node
+bundle: home_page
+label: 'Porque Faros Título'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

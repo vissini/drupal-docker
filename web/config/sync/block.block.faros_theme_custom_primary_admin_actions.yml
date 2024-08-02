@@ -1,0 +1,20 @@
+uuid: 14f60270-eabf-436d-bba3-aaf1555a359f
+langcode: pt-br
+status: true
+dependencies:
+  theme:
+    - faros_theme_custom
+_core:
+  default_config_hash: T4fILzJlIzM9vYM_rEDslzDsiIr8JlQap0hZ5tSe3IU
+id: faros_theme_custom_primary_admin_actions
+theme: faros_theme_custom
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Ações primárias do administrador'
+  label_display: '0'
+  provider: core
+visibility: {  }

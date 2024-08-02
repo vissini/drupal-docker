@@ -1,0 +1,25 @@
+uuid: 5250e1a5-868f-4e23-9810-e987edca8c00
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - system.menu.footer---social-media
+  module:
+    - system
+  theme:
+    - faros_theme_custom
+id: faros_theme_custom_footersocialmedia
+theme: faros_theme_custom
+region: footer_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer---social-media'
+settings:
+  id: 'system_menu_block:footer---social-media'
+  label: 'Footer - Social Media'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

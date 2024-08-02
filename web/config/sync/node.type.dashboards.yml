@@ -1,0 +1,17 @@
+uuid: b98d396d-6f5b-4277-b426-4f30901f7307
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Dashboards
+type: dashboards
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

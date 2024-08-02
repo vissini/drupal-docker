@@ -1,0 +1,9 @@
+_core:
+  default_config_hash: UoV6qv_r_-7TBFZaqKvIg8vI5QF55m-tuIR_LcmtfSw
+langcode: pt-br
+onlyone_node_types:
+  home_page: home_page
+  institutional: institutional
+  solutions: solutions
+onlyone_new_menu_entry: true
+onlyone_redirect: true

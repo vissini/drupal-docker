@@ -1,0 +1,31 @@
+uuid: 864283b9-0526-44dc-82ea-711a3c44dc3f
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5f08ed4d-1adf-43b9-a4fb-83e7d1f64616'
+  module:
+    - block_classes
+    - block_content
+    - system
+  theme:
+    - faros_theme_custom
+id: faros_theme_custom_falecomumespecialista
+theme: faros_theme_custom
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:5f08ed4d-1adf-43b9-a4fb-83e7d1f64616'
+settings:
+  id: 'block_content:5f08ed4d-1adf-43b9-a4fb-83e7d1f64616'
+  label: 'Fale com um especialista'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/solucao\r\n/node/6\r\n/\r\n/node/16\r\n/institucional\r\n/blog"

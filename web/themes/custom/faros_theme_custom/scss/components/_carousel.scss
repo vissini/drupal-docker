@@ -1,0 +1,149 @@
+.card-client {
+    max-width: 90% !important;
+    margin-bottom: 60px;
+}
+
+.slick-carousel-testimonials {
+  .slick-list {
+    margin: 0 -30px 0 0; /* Ajuste a margem para compensar o padding dos slides */
+  }
+
+  .slide {
+    display: flex;
+    align-items: stretch;
+    padding: 0 10px; /* Adiciona padding para criar espaçamento entre os cards */
+    overflow: hidden; /* Garante que a sombra não ultrapasse os limites */
+  }
+
+  /* Remover padding do primeiro e último slide */
+  .slick-list .slick-slide:first-of-type {
+    padding-left: 0;
+  }
+
+  .slick-list .slick-slide:last-of-type {
+    padding-right: 0;
+  }
+
+  .card-testimonial{
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra no lado direito e embaixo */
+    transition: box-shadow 0.3s ease-in-out;
+    width: 100%;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px; /* Adiciona borda arredondada para um visual mais suave */
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin-left:0px;
+    }
+
+    .card-body {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+.slick-carousel-blog-row {
+  .slick-list {
+    margin: 0 -30px 0 0; /* Ajuste a margem para compensar o padding dos slides */
+  }
+
+  .slide {
+    display: flex;
+    align-items: stretch;
+    padding: 0 10px; /* Adiciona padding para criar espaçamento entre os cards */
+    overflow: hidden; /* Garante que a sombra não ultrapasse os limites */
+  }
+
+  /* Remover padding do primeiro e último slide */
+  .slick-list .slick-slide:first-of-type {
+    padding-left: 0;
+  }
+
+  .slick-list .slick-slide:last-of-type {
+    padding-right: 0;
+  }
+
+  .card-news {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra no lado direito e embaixo */
+    transition: box-shadow 0.3s ease-in-out;
+    width: 100%;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px; /* Adiciona borda arredondada para um visual mais suave */
+  }
+
+  .slide:hover .card-news {
+    box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+  }
+
+  .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-img-top {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+  }
+
+  .category-tag {
+    bottom: 10px;
+    left: 10px;
+    background-color: #6f42c1;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 768px) {
+    .slick-list {
+      margin: 0 -5px 0 0; /* Ajuste a margem para compensar o padding dos slides em telas menores */
+    }
+
+    .slide {
+      padding: 0 5px; /* Ajuste para telas menores */
+    }
+
+    .slick-list .slick-slide:first-of-type {
+      padding-left: 0;
+    }
+
+    .slick-list .slick-slide:last-of-type {
+      padding-right: 0;
+    }
+  }
+}
+
+.slick-carousel-clients {
+  .centered-image {
+    /* Limitar o tamanho máximo */
+    max-width: 146px;
+    max-height: 60px;
+    /* Preencher o espaço do contêiner */
+    width: 100%;
+    height: 100%;
+    /* Redimensionar a imagem para caber dentro do contêiner, mantendo a proporção */
+    object-fit: contain;
+    /* Centralizar a imagem */
+    object-position: center;
+  }
+}
+
+#next-home-carousel,
+#prev-home-carousel {
+  color: $primary;
+  font-size: 36px;
+  margin-left: 5px;
+  cursor: pointer;
+}

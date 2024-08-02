@@ -1,0 +1,24 @@
+uuid: b41b84a7-7db8-41c3-af0a-e460044414d9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.dashboards
+  module:
+    - text
+id: node.dashboards.body
+field_name: body
+entity_type: node
+bundle: dashboards
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

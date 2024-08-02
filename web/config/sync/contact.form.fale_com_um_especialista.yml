@@ -1,0 +1,12 @@
+uuid: c568b693-5146-4c77-bb0e-3be7dee65f8c
+langcode: pt-br
+status: true
+dependencies: {  }
+id: fale_com_um_especialista
+label: 'Fale com um especialista'
+recipients:
+  - diego@vissini.com.br
+reply: ''
+weight: 0
+message: 'Obrigado! Aguarde que em breve um especialista entrará em contato com você'
+redirect: ''

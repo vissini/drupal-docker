@@ -1,0 +1,19 @@
+uuid: d6e4473d-300d-4cd5-b56e-2cc2e08787c7
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_testimony
+field_name: field_testimony
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+a.footer-media-social-icon{
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  background-color: $primary !important;
+
+  i {
+    font-size: 20px; // Define a altura do ícone
+  }
+
+  &:hover {
+    background-color: $secondary !important; // Muda a cor de fundo para secondary no hover
+  }
+}
+
+.footer-menu-hover:hover {
+  text-decoration: underline;
+}

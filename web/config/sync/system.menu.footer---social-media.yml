@@ -1,0 +1,8 @@
+uuid: 2a6f6d47-ec32-4e0d-8696-aa3220d0f0cb
+langcode: pt-br
+status: true
+dependencies: {  }
+id: footer---social-media
+label: 'Footer - Social Media'
+description: 'Links redes sociais'
+locked: false

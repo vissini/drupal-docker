@@ -1,0 +1,48 @@
+uuid: f6bb9d83-6d77-4e40-af80-356ad2830efe
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.testimonials.field_company_name
+    - field.field.paragraph.testimonials.field_icon
+    - field.field.paragraph.testimonials.field_person_name
+    - field.field.paragraph.testimonials.field_testimony
+    - paragraphs.paragraphs_type.testimonials
+id: paragraph.testimonials.default
+targetEntityType: paragraph
+bundle: testimonials
+mode: default
+content:
+  field_company_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icon:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_person_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_testimony:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

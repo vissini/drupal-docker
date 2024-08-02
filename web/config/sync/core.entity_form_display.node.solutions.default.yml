@@ -1,0 +1,283 @@
+uuid: ea28c957-5535-4d23-a27b-7df00ec20be8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.solutions.body
+    - field.field.node.solutions.field_headline
+    - field.field.node.solutions.field_paragraph_clients
+    - field.field.node.solutions.field_paragraph_testimonials
+    - field.field.node.solutions.field_planos
+    - field.field.node.solutions.field_plans_subtitle
+    - field.field.node.solutions.field_plans_title
+    - field.field.node.solutions.field_subtitle
+    - field.field.node.solutions.field_testimony_subtitle
+    - field.field.node.solutions.field_testimony_title
+    - field.field.node.solutions.field_thematic_axes
+    - field.field.node.solutions.field_thematic_axes_subtitle
+    - field.field.node.solutions.field_thematic_axes_title
+    - field.field.node.solutions.field_title_clients
+    - field.field.node.solutions.field_video
+    - node.type.solutions
+  module:
+    - field_group
+    - media_library
+    - paragraphs
+    - path
+third_party_settings:
+  field_group:
+    group_clientes:
+      children:
+        - field_title_clients
+        - field_paragraph_clients
+      label: Clientes
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: solution_client_fieldset
+        open: false
+        description: ''
+        required_fields: true
+    group_eixos_tematicos:
+      children:
+        - field_thematic_axes_title
+        - field_thematic_axes_subtitle
+        - field_thematic_axes
+      label: 'Eixos Temáticos'
+      region: content
+      parent_name: ''
+      weight: 6
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: solution_thematic_fieldset
+        open: false
+        description: ''
+        required_fields: true
+    group_pacotes:
+      children:
+        - field_plans_title
+        - field_plans_subtitle
+        - field_planos
+      label: Pacotes
+      region: content
+      parent_name: ''
+      weight: 7
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: solution_plans
+        open: false
+        description: ''
+        required_fields: true
+    group_depoimentos:
+      children:
+        - field_testimony_title
+        - field_testimony_subtitle
+        - field_paragraph_testimonials
+      label: Depoimentos
+      region: content
+      parent_name: ''
+      weight: 8
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: solution_review
+        open: false
+        description: ''
+        required_fields: true
+id: node.solutions.default
+targetEntityType: node
+bundle: solutions
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_headline:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_paragraph_clients:
+    type: paragraphs
+    weight: 5
+    region: content
+    settings:
+      title: Parágrafo
+      title_plural: Parágrafos
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_paragraph_testimonials:
+    type: paragraphs
+    weight: 10
+    region: content
+    settings:
+      title: Parágrafo
+      title_plural: Parágrafos
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_planos:
+    type: entity_reference_autocomplete
+    weight: 14
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_plans_subtitle:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_plans_title:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_testimony_subtitle:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_testimony_title:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_thematic_axes:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_thematic_axes_subtitle:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_thematic_axes_title:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title_clients:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_video:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 9
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  promote: true
+  sticky: true

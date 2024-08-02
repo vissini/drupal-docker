@@ -1,0 +1,14 @@
+name: 'Micon Config Test'
+type: module
+description: 'Installs config for testing purposes'
+package: Testing
+core_version_requirement: ^10 || ^11
+dependencies:
+  - micon:micon
+  - drupal:node
+  - micon:micon_basic_configs
+
+# Information added by Drupal.org packaging script on 2024-05-21
+version: '2.1.0-beta10'
+project: 'micon'
+datestamp: 1716278966

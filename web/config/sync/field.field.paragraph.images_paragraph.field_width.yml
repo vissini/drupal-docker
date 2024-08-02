@@ -1,0 +1,23 @@
+uuid: 46920ede-a731-42a4-87a8-7dc72fabdf34
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_width
+    - paragraphs.paragraphs_type.images_paragraph
+  module:
+    - options
+id: paragraph.images_paragraph.field_width
+field_name: field_width
+entity_type: paragraph
+bundle: images_paragraph
+label: Largura
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '1'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

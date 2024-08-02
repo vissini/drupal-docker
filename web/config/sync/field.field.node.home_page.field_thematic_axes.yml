@@ -1,0 +1,29 @@
+uuid: 7b081955-258d-42d1-a3e3-54e460b2aabc
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_thematic_axes
+    - node.type.home_page
+    - node.type.thematic_axes
+id: node.home_page.field_thematic_axes
+field_name: field_thematic_axes
+entity_type: node
+bundle: home_page
+label: 'Eixos Temáticos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      thematic_axes: thematic_axes
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

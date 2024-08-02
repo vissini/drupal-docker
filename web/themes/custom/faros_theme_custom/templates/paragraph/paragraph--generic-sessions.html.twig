@@ -1,0 +1,42 @@
+<div class="row my-5">
+  {% set classColText = "col-12" %}
+  {% for item in content.field_paragraph_image['#items'] %}
+    {% set position = item.entity.field_position.value ?? 'none' %}
+    {% set classCol = "col-12" %}
+    {% if item.entity.field_width.value == 1 %}
+      {% set classCol = "col-12 col-lg-12" %}
+      {% set classColText = "col-12 col-lg-12" %}
+    {% endif %}
+    {% if item.entity.field_width.value == 2 %}
+      {% set classCol = "col-12 col-lg-6" %}
+      {% set classColText = "col-12 col-lg-6" %}
+    {% endif %}
+    {% if item.entity.field_width.value == 3 %}
+      {% set classCol = "col-12 col-lg-4" %}
+      {% set classColText = "col-12 col-lg-8" %}
+    {% endif %}
+    {% if item.entity.field_width.value == 4 %}
+      {% set classCol = "col-12 col-lg-3" %}
+      {% set classColText = "col-12 col-lg-9" %}
+    {% endif %}
+    {% if item.entity.field_width.value == 5 %}
+      {% set classCol = "col-12 col-lg-8" %}
+      {% set classColText = "col-12 col-lg-4" %}
+    {% endif %}
+    {% if item.entity.field_width.value == 6 %}
+      {% set classCol = "col-12 col-lg-9" %}
+      {% set classColText = "col-12 col-lg-3" %}
+    {% endif %}
+    {% set desktop_image = item.entity.field_desktop_image %}
+    {% set desktop_image_uri = desktop_image.entity.get('field_media_image').entity.getFileUri() ?? '' %}
+    {% set desktop_image_url = desktop_image_uri ? file_url(desktop_image_uri) : '' %}
+    <div class="{{classCol}} float-{{position}} my-2 my-lg-0">
+      <img src="{{ desktop_image_url }}" class="img-fluid rounded-3" alt="">
+    </div>
+  {% endfor %}
+  <div class="{{classColText}} text-left my-2 my-lg-0">
+
+    <h2 class="text-left">{{content.field_title[0]["#context"].value}}</h2>
+    {{content.field_content_session}}
+  </div>
+</div>

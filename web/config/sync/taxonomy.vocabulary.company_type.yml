@@ -1,0 +1,9 @@
+uuid: 776ebbc5-d6d9-4b2d-b32c-969348875f03
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Tipo de Empresa'
+vid: company_type
+description: null
+weight: 0
+new_revision: false

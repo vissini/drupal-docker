@@ -1,0 +1,23 @@
+services:
+  faros_login.company_manager:
+    class: Drupal\faros_login\Services\CompanyManager
+    arguments: 
+      - '@entity_type.manager'
+      - '@config.factory'
+
+  faros_login.user_manager:
+    class: Drupal\faros_login\Services\UserManager
+    arguments: ['@entity_type.manager']
+
+  faros_login.register_form_validations:
+    class: Drupal\faros_login\Services\RegisterFormValidations
+    arguments: ['@entity_type.manager']
+
+  faros_login.email_manager:
+    class: Drupal\faros_login\Services\EmailManager
+    arguments: ['@plugin.manager.mail', '@config.factory', '@tempstore.private']
+
+  faros_login.event_subscriber:
+    class: Drupal\faros_login\EventSubscriber\EmailEventSubscriber
+    tags:
+      - { name: event_subscriber }

@@ -1,0 +1,99 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_install().
+ */
+function faros_login_install() {
+  // Function to create taxonomy vocabularies.
+  _faros_login_create_taxonomies();
+
+  _faros_login_add_terms();
+}
+
+/**
+ * Function to create taxonomy vocabularies.
+ */
+function _faros_login_create_taxonomies() {
+  $vocabularies = [
+    'company_sector' => 'Setor da Empresa',
+    'company_type' => 'Tipo de Empresa',
+    'company_interest' => 'Interesse da Empresa',
+  ];
+
+  foreach ($vocabularies as $vid => $name) {
+    if (!\Drupal::entityTypeManager()->getStorage('taxonomy_vocabulary')->load($vid)) {
+      $vocabulary = \Drupal\taxonomy\Entity\Vocabulary::create([
+        'vid' => $vid,
+        'description' => '',
+        'name' => $name,
+        'langcode' => 'pt-br',
+        'status' => TRUE,
+      ]);
+      $vocabulary->save();
+    }
+  }
+}
+
+/**
+ * Function to add terms to taxonomies.
+ */
+function _faros_login_add_terms() {
+  $terms = [
+    'company_sector' => [
+      'Indústria',
+      'Comércio',
+      'Serviços',
+      'Gestão Pública',
+    ],
+    'company_type' => [
+      'Iniciativa Privada',
+      'Setor Público',
+      'Associações de Classes',
+      'Universidades'
+    ],
+    'company_interest' => [
+      'Economia',
+      'Inovação',
+      'Tecnologia',
+      'Saúde',
+      'Educação',
+    ],
+  ];
+
+  foreach ($terms as $vid => $term_names) {
+    $vocabulary = \Drupal::entityTypeManager()->getStorage('taxonomy_vocabulary')->load($vid);
+    if ($vocabulary) {
+      foreach ($term_names as $name) {
+        // Check if the term already exists.
+        $existing_terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties(['name' => $name, 'vid' => $vid]);
+        if (empty($existing_terms)) {
+          $term = \Drupal\taxonomy\Entity\Term::create([
+            'vid' => $vid,
+            'name' => $name,
+          ]);
+          $term->save();
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_update_10001().
+ * Add terms to taxonomies.
+ */
+function faros_login_update_10001() {
+  // Create taxonomy vocabularies if they don't already exist.
+  _faros_login_create_taxonomies();
+}
+
+/**
+ * Implements hook_update_10002().
+ * Add terms to taxonomies.
+ */
+function faros_login_update_10002() {
+  // Add terms to taxonomies.
+  _faros_login_add_terms();
+}

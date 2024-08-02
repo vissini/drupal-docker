@@ -1,0 +1,23 @@
+uuid: 00690e66-c6fa-4e1c-8bc7-9df171e722c1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_position
+    - paragraphs.paragraphs_type.images_paragraph
+  module:
+    - options
+id: paragraph.images_paragraph.field_position
+field_name: field_position
+entity_type: paragraph
+bundle: images_paragraph
+label: Posição
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

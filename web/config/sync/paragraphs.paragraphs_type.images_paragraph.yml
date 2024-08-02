@@ -1,0 +1,10 @@
+uuid: cce895bd-e47f-40c9-a0b5-c16cec778be0
+langcode: pt-br
+status: true
+dependencies: {  }
+id: images_paragraph
+label: Imagens
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

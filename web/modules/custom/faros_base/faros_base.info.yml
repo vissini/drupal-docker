@@ -1,0 +1,9 @@
+name: 'Faros Base'
+type: module
+description: 'A Base module for all common functionalities for Faros'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - toolbar
+libraries:
+  - faros_base/toolbar

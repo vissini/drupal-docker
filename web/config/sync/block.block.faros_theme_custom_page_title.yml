@@ -1,0 +1,20 @@
+uuid: 4085c8ec-d648-4c17-bc91-e1a1aae519c9
+langcode: pt-br
+status: true
+dependencies:
+  theme:
+    - faros_theme_custom
+_core:
+  default_config_hash: Z3JztA7iiYKJRHmZ0DuOLKKzBioQsXx-kzU9_xPz8h8
+id: faros_theme_custom_page_title
+theme: faros_theme_custom
+region: content
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título da página'
+  label_display: '0'
+  provider: core
+visibility: {  }

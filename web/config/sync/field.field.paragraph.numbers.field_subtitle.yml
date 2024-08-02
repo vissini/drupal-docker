@@ -1,0 +1,19 @@
+uuid: 53e9ccff-fe5d-4e7e-afcd-1abb155bcc05
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_subtitle
+    - paragraphs.paragraphs_type.numbers
+id: paragraph.numbers.field_subtitle
+field_name: field_subtitle
+entity_type: paragraph
+bundle: numbers
+label: 'Descrição Números'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,43 @@
+uuid: 195e761a-f117-4cca-af5a-300b4130c02e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.clients.field_client_name
+    - field.field.paragraph.clients.field_client_url
+    - field.field.paragraph.clients.field_logo
+    - paragraphs.paragraphs_type.clients
+  module:
+    - link
+    - media_library
+id: paragraph.clients.default
+targetEntityType: paragraph
+bundle: clients
+mode: default
+content:
+  field_client_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_client_url:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_logo:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

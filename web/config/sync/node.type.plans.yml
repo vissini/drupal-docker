@@ -1,0 +1,17 @@
+uuid: 113d543f-0e31-4de6-87f6-055e93bd1fc0
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Planos
+type: plans
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

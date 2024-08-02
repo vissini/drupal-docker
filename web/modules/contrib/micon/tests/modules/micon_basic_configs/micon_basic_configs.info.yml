@@ -1,0 +1,13 @@
+name: 'Micon Basic Configs'
+type: module
+description: 'Installs basic configs for micon.'
+package: Testing
+core_version_requirement: ^10 || ^11
+dependencies:
+  - micon:micon
+  - drupal:node
+
+# Information added by Drupal.org packaging script on 2024-05-21
+version: '2.1.0-beta10'
+project: 'micon'
+datestamp: 1716278966

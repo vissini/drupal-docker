@@ -1,0 +1,23 @@
+.menu--main li a {
+    color: $black;
+
+    &:hover {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+}
+
+.menu--main li .active,
+.menu--main li .is-active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.menu--account li a {
+    color: $black;
+}
+
+.navbar-nav {
+    flex-direction: row !important;
+    gap: 20px;
+}

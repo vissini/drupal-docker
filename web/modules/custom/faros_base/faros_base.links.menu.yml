@@ -1,0 +1,11 @@
+faros_base.settings:
+  title: Faros
+  parent: system.admin
+  route_name: faros_base.settings
+  weight: -10
+
+faros_base.expert_contact_settings:
+  title: "Fale com especialista"
+  parent: faros_base.settings
+  route_name: faros_base.expert_contact_settings
+  weight: 10

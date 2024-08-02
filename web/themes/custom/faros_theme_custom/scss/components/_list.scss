@@ -1,0 +1,27 @@
+.plan-checklist {
+  list-style: none; /* Remove os bullets padrão */
+  padding: 0;
+  margin: 0;
+
+  li {
+    position: relative;
+    padding-left: 2rem; /* Espaçamento para o bullet customizado */
+
+    &:before {
+      content: '\2713'; /* Unicode para o checkmark */
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #007bff; /* Cor de fundo azul */
+      color: #fff; /* Cor do checkmark branca */
+      border-radius: 50%; /* Faz o fundo ser um círculo */
+      width: 1rem;
+      height: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+    }
+  }
+}

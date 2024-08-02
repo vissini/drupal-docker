@@ -1,0 +1,16 @@
+{{ attach_library('faros_theme_custom/slick-carousel') }}
+<div class="slick-carousel-clients">
+  {% for item in clients['#items'] %}
+    {% set logo_media = item.entity.get('field_logo').entity %}
+    {% set logo_file = logo_media ? logo_media.get('field_media_image').entity : null %}
+    {% set logo_uri = logo_file ? logo_file.getFileUri() : '' %}
+    {% set logo_url = logo_uri ? file_url(logo_uri) : '' %}
+    {% set name = item.entity.get('field_client_name').value %}
+    {% set url = item.entity.get('field_client_url').value[0]['uri'] ?? '' %}
+    <div class="slide d-flex">
+      <div class="card-client border justify-content-center" style="max-width: 146px; max-height: 60px; width: 146px; height: 60px; overflow: hidden;">
+        <img src="{{ logo_url }}" alt="{{ name }}" class="img-fluid centered-image">
+      </div>
+    </div>
+  {% endfor %}
+</div>

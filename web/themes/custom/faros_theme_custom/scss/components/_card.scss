@@ -1,0 +1,60 @@
+.card.card-axe {
+  background-color: $color1_faros;
+  a {
+    text-decoration: none;
+
+    i {
+      font-size: 58px;
+      color: #70c8e8;
+    }
+  }
+}
+
+.card.card-axe.active {
+  background-color: $color3_faros;
+  a {
+    i {
+      color: $white;
+    }
+  }
+}
+
+.card.card-plans {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra no lado direito e embaixo */
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra no lado direito e embaixo */
+  }
+}
+
+.blog-list-row {
+  .card-news {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra no lado direito e embaixo */
+    transition: box-shadow 0.3s ease-in-out;
+    width: 100%;
+    border-radius: 5px; /* Adiciona borda arredondada para um visual mais suave */
+  }
+
+  .card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card-img-top {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+  }
+
+  .category-tag {
+    bottom: 10px;
+    left: 10px;
+    background-color: #6f42c1;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+}

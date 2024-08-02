@@ -1,0 +1,29 @@
+uuid: 71cc3e48-aa7e-4bd8-a1e8-1ea8fd2b802e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon
+    - media.type.image
+    - node.type.thematic_axes
+id: node.thematic_axes.field_icon
+field_name: field_icon
+entity_type: node
+bundle: thematic_axes
+label: Ícone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

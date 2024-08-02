@@ -1,0 +1,29 @@
+uuid: 7f9d197d-0965-42d5-96b9-ce334cb3e49c
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.topics.field_topic_description
+    - field.field.paragraph.topics.field_topic_title
+    - paragraphs.paragraphs_type.topics
+id: paragraph.topics.default
+targetEntityType: paragraph
+bundle: topics
+mode: default
+content:
+  field_topic_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_topic_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

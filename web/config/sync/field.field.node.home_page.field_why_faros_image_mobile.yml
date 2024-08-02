@@ -1,0 +1,29 @@
+uuid: bc463681-d738-4d5b-ae07-4f44f807f3a4
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_why_faros_image_mobile
+    - media.type.image
+    - node.type.home_page
+id: node.home_page.field_why_faros_image_mobile
+field_name: field_why_faros_image_mobile
+entity_type: node
+bundle: home_page
+label: 'Porque Faros Imagem Mobile'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

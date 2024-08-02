@@ -1,0 +1,10 @@
+uuid: f8313a7f-e53f-41ef-a977-4328afe294c9
+langcode: pt-br
+status: true
+dependencies: {  }
+id: topics
+label: Tópicos
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,46 @@
+uuid: 01c094de-3965-46ba-90eb-61139cc9eb73
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_testimonials
+    - node.type.solutions
+    - paragraphs.paragraphs_type.testimonials
+  module:
+    - entity_reference_revisions
+id: node.solutions.field_paragraph_testimonials
+field_name: field_paragraph_testimonials
+entity_type: node
+bundle: solutions
+label: Depoimentos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      testimonials: testimonials
+    negate: 0
+    target_bundles_drag_drop:
+      clients:
+        weight: 7
+        enabled: false
+      generic_sessions:
+        weight: 8
+        enabled: false
+      images_paragraph:
+        weight: 9
+        enabled: false
+      team:
+        weight: 10
+        enabled: false
+      testimonials:
+        weight: 11
+        enabled: true
+      topics:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

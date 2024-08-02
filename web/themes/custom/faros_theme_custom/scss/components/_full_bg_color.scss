@@ -1,0 +1,12 @@
+.gray-background {
+  @include full-background(#f2f7f9);
+}
+
+.blue-degrade-background {
+  @include linear-gradient-background(#17AAE0, #119ED4, #095DA8);
+}
+
+.red-degrade-background {
+  @include linear-gradient-background(#FF5733, #C70039, #900C3F);
+}
+

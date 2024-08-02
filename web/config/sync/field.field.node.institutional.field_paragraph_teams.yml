@@ -1,0 +1,52 @@
+uuid: 5de2c5c1-c41f-4638-96f2-e396c991b944
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_teams
+    - node.type.institutional
+    - paragraphs.paragraphs_type.team
+  module:
+    - entity_reference_revisions
+id: node.institutional.field_paragraph_teams
+field_name: field_paragraph_teams
+entity_type: node
+bundle: institutional
+label: 'Equipe - Itens'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      team: team
+    negate: 0
+    target_bundles_drag_drop:
+      clients:
+        weight: 7
+        enabled: false
+      generic_sessions:
+        weight: 8
+        enabled: false
+      images_paragraph:
+        weight: 9
+        enabled: false
+      numbers:
+        weight: 12
+        enabled: false
+      team:
+        weight: 10
+        enabled: true
+      testimonials:
+        weight: 11
+        enabled: false
+      topics:
+        weight: 12
+        enabled: false
+      why_faros_items:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

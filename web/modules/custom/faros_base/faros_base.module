@@ -1,0 +1,45 @@
+<?php
+
+/**
+ * @file
+ * Expert Contact module.
+ */
+use Drupal\Core\StringTranslation\StringTranslationTrait;
+
+/**
+ * Implements hook_preprocess_HOOK() for block templates.
+ */
+function faros_base_preprocess_block(&$variables) {
+  // Import the trait in the function scope.
+  $string_translation = new class {
+    use StringTranslationTrait;
+  };
+
+  // Get the block ID.
+  $block_id = $variables['elements']['#id'];
+
+  // Check if the block ID matches the custom block's ID.
+  if ($block_id === 'faros_falecomumespecialista') {
+    // Load the configuration.
+    $config = \Drupal::config('faros_base.expert_contact_settings');
+    $phone_number = $config->get('phone_number');
+    $message = $config->get('message');
+
+
+    // Update the block content.
+    $bodyOldValue = $variables['content']['body'][0]['#text'];
+
+    $variables['content']['body'][0]['#text'] = t($bodyOldValue, [
+      '@phone_number' => $phone_number,
+      '@message' => $message,
+    ]);
+  }
+}
+
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function faros_base_page_attachments_alter(array &$attachments) {
+  $attachments['#attached']['library'][] = 'faros_base/toolbar';
+}

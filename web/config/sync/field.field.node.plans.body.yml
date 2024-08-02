@@ -1,0 +1,24 @@
+uuid: 7dc00246-4060-4c01-b3e2-815ce41b40e0
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.plans
+  module:
+    - text
+id: node.plans.body
+field_name: body
+entity_type: node
+bundle: plans
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

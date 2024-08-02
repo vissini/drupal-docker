@@ -1,0 +1,10 @@
+uuid: 98cd863f-c7fb-4a04-bce8-1794b38e6390
+langcode: pt-br
+status: true
+dependencies: {  }
+id: clients
+label: Clientes
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

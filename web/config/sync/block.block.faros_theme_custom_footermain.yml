@@ -1,0 +1,25 @@
+uuid: f768a219-9c8b-4e2d-be69-8b481608ff36
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - system.menu.footer---main
+  module:
+    - system
+  theme:
+    - faros_theme_custom
+id: faros_theme_custom_footermain
+theme: faros_theme_custom
+region: footer_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer---main'
+settings:
+  id: 'system_menu_block:footer---main'
+  label: 'Footer - Main'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

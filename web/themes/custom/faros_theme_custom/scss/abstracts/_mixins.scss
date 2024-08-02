@@ -1,0 +1,106 @@
+@mixin shadow {
+    -webkit-box-shadow: 10px 10px 47px -22px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 47px -22px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 47px -22px rgba(0,0,0,0.75);
+}
+
+@mixin pseudo-element-width($decrease: 0px) {
+  @include media-breakpoint-up (sm) {
+    width: calc(map-get($pseudo-element-width, 'sm') - $decrease);
+  }
+
+  @include media-breakpoint-up (md) {
+    width: calc(map-get($pseudo-element-width, 'md') - $decrease);
+  }
+
+  @include media-breakpoint-up (lg) {
+    width: calc(map-get($pseudo-element-width, 'lg') - $decrease);
+  }
+
+  @include media-breakpoint-up (xl) {
+    width: calc(map-get($pseudo-element-width, 'xl') - $decrease);
+  }
+
+  @include media-breakpoint-up (xxl) {
+    width: calc(map-get($pseudo-element-width, 'xxl') - $decrease);
+  }
+}
+
+@mixin pseudo-element-left($increase: 7px) {
+  @include media-breakpoint-up (sm) {
+    left: calc((map-get($pseudo-element-position, 'sm')) + $increase);
+  }
+
+  @include media-breakpoint-up (md) {
+    left: calc((map-get($pseudo-element-position, 'md')) + $increase);
+  }
+
+  @include media-breakpoint-up (lg) {
+    left: calc((map-get($pseudo-element-position, 'lg')) + $increase);
+  }
+
+  @include media-breakpoint-up (xl) {
+    left: calc((map-get($pseudo-element-position, 'xl')) + $increase);
+  }
+
+  @include media-breakpoint-up (xxl) {
+    left: calc((map-get($pseudo-element-position, 'xxl')) + $increase);
+  }
+}
+
+
+@mixin pseudo-element-right($increase: 8px) {
+  @include media-breakpoint-up (sm) {
+    right: calc((map-get($pseudo-element-position, 'sm')) + $increase);
+  }
+
+  @include media-breakpoint-up (md) {
+    right: calc((map-get($pseudo-element-position, 'md')) + $increase);
+  }
+
+  @include media-breakpoint-up (lg) {
+    right: calc((map-get($pseudo-element-position, 'lg')) + $increase);
+  }
+
+  @include media-breakpoint-up (xl) {
+    right: calc((map-get($pseudo-element-position, 'xl')) + $increase);
+  }
+
+  @include media-breakpoint-up (xxl) {
+    right: calc((map-get($pseudo-element-position, 'xxl')) + $increase);
+  }
+}
+
+
+@mixin full-background($bg-color) {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    box-sizing: initial;
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 99999;
+    background: $bg-color;
+
+    @include pseudo-element-width;
+  }
+
+  &:before {
+    @include pseudo-element-left;
+  }
+
+  &:after {
+    @include pseudo-element-right;
+  }
+
+  background: $bg-color;
+}
+
+@mixin linear-gradient-background($color1, $color2, $color3) {
+  $bg: transparent linear-gradient(180deg, $color1 0%, $color2 50%, $color3 100%) 0% 0% no-repeat padding-box;
+  @include full-background($bg);
+}

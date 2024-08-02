@@ -1,0 +1,22 @@
+uuid: 688f15f6-354b-421c-b795-1527ceb9d491
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - faros_theme_custom
+_core:
+  default_config_hash: XGdrpo0pFZZ0XKnoxP8HsB5o8g3TOQ7RPTpDK-WdENs
+id: faros_theme_custom_messages
+theme: faros_theme_custom
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensagens de status'
+  label_display: '0'
+  provider: system
+visibility: {  }

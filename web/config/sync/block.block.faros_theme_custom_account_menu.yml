@@ -1,0 +1,27 @@
+uuid: 6162c84d-9412-44cd-994e-683758484167
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - faros_theme_custom
+_core:
+  default_config_hash: '-GwYO-fhuLvKo2e_milu93y1pTTc4l6Vr8zI6F8xMV8'
+id: faros_theme_custom_account_menu
+theme: faros_theme_custom
+region: secondary_menu
+weight: -7
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Menu de conta de usuário'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

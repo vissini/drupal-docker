@@ -1,0 +1,42 @@
+uuid: 6ca71415-fead-4d25-afa5-6d4cd027c883
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.why_faros_items.field_icon_moon
+    - field.field.paragraph.why_faros_items.field_subtitle
+    - field.field.paragraph.why_faros_items.field_title
+    - paragraphs.paragraphs_type.why_faros_items
+  module:
+    - micon
+id: paragraph.why_faros_items.default
+targetEntityType: paragraph
+bundle: why_faros_items
+mode: default
+content:
+  field_icon_moon:
+    type: string_micon
+    weight: 5
+    region: content
+    settings:
+      packages: {  }
+    third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

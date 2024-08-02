@@ -1,0 +1,11 @@
+uuid: 53ca1739-fc07-435e-b5cf-3fe4985f3065
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.thematic_axes
+id: node.thematic_axes
+target_entity_type_id: node
+target_bundle: thematic_axes
+default_langcode: site_default
+language_alterable: false

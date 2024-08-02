@@ -1,0 +1,13 @@
+uuid: 9d8b46ad-16ad-4b2f-889b-96d4fc6f1d9c
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - faros_login
+_core:
+  default_config_hash: 21f57mJuwJ73yrDyy-lQ0xvwhHYnY2gXOBcBbl_cGrE
+id: faros_login_company_save_action
+label: 'Save companies'
+type: faros_login_company
+plugin: 'entity:save_action:faros_login_company'
+configuration: {  }

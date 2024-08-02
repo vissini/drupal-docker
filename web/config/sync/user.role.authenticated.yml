@@ -1,0 +1,39 @@
+uuid: 878d6e79-c7ef-4327-9b0c-0295f4b7e9cc
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - comment
+    - contact
+    - file
+    - filter
+    - media
+    - paragraphs_type_permissions
+    - shortcut
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'Usuário autenticado'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'delete own files'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'view media'
+  - 'view paragraph content clients'
+  - 'view paragraph content generic_sessions'
+  - 'view paragraph content images_paragraph'
+  - 'view paragraph content numbers'
+  - 'view paragraph content team'
+  - 'view paragraph content testimonials'
+  - 'view paragraph content topics'
+  - 'view paragraph content why_faros_items'

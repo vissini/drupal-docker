@@ -1,0 +1,22 @@
+uuid: 450d5ae4-6154-4696-b0c1-d771975d0b1a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.faq
+id: node.faq.promote
+field_name: promote
+entity_type: node
+bundle: faq
+label: 'Promovido para a página inicial'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean

@@ -1,0 +1,43 @@
+uuid: 59c8747f-0eba-422d-bcd1-1bcf3764c8bc
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.institutional.body
+    - field.field.node.institutional.field_desktop_image
+    - field.field.node.institutional.field_mobile_image
+    - field.field.node.institutional.field_paragraph_session
+    - field.field.node.institutional.field_paragraph_teams
+    - field.field.node.institutional.field_team_session_content
+    - field.field.node.institutional.field_team_session_title
+    - node.type.institutional
+  module:
+    - text
+    - user
+id: node.institutional.teaser
+targetEntityType: node
+bundle: institutional
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_desktop_image: true
+  field_mobile_image: true
+  field_paragraph_session: true
+  field_paragraph_teams: true
+  field_team_session_content: true
+  field_team_session_title: true
+  langcode: true

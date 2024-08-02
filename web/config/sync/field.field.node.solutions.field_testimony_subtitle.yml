@@ -1,0 +1,19 @@
+uuid: 0f7f7bda-1b75-485d-8dc9-a541ac58229a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_testimony_subtitle
+    - node.type.solutions
+id: node.solutions.field_testimony_subtitle
+field_name: field_testimony_subtitle
+entity_type: node
+bundle: solutions
+label: 'Subtítulo Depoimentos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

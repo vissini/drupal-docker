@@ -1,0 +1,23 @@
+uuid: 5f4f78b4-72b0-49b4-bbf3-602fb861a872
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_max_user_number
+    - node.type.plans
+id: node.plans.field_max_user_number
+field_name: field_max_user_number
+entity_type: node
+bundle: plans
+label: 'Número máximo de usuário'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

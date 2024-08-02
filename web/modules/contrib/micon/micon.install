@@ -1,0 +1,46 @@
+<?php
+
+/**
+ * @file
+ * Standard installation functions for micon.
+ */
+
+/**
+ * Upgrade to new storage format.
+ */
+function micon_update_8001() {
+  $entities = \Drupal::entityTypeManager()
+    ->getStorage('micon')
+    ->loadMultiple();
+
+  foreach ($entities as $entity) {
+    $dataArray = $entity->get('archive');
+    if (empty($dataArray)) {
+      continue;
+    }
+    $data = implode('', $dataArray);
+    $zip_archive = unserialize(gzuncompress(stripslashes(base64_decode(strtr($data, '-_,', '+/=')))), ['allowed_classes' => FALSE]);
+    $entity->set('archive', $zip_archive);
+    $entity->save();
+  }
+
+  drupal_flush_all_caches();
+}
+
+/**
+ * Override "settings" array, as they are now hard coded.
+ *
+ * @todo This will be reworked and commented in again after 10.3.0 becomes
+ * stable through https://www.drupal.org/project/micon/issues/3447708.
+ */
+// function micon_update_8002() {
+//   $fieldStorages = \Drupal::entityTypeManager()
+//     ->getStorage('field_storage_config')
+//     ->loadByProperties([
+//       'type' => 'string_micon',
+//     ]);
+
+//   foreach ($fieldStorages as $fieldStorage) {
+//     $fieldStorage->set('settings', [])->save();
+//   }
+// }

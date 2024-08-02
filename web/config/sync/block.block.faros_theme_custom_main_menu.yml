@@ -1,0 +1,27 @@
+uuid: 7913dba0-52fd-495f-962f-c63e4db58e2f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - faros_theme_custom
+_core:
+  default_config_hash: TY-Q2tya9v8qQZByH8CJPsvz5SuRzU-xQhR0ZytJD-E
+id: faros_theme_custom_main_menu
+theme: faros_theme_custom
+region: primary_menu
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegação principal'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

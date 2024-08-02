@@ -1,0 +1,22 @@
+uuid: 0d23badc-6393-4e15-88ae-f0b858773aec
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - faros_theme_custom
+_core:
+  default_config_hash: K9phvQl3t8Ld7Q06EXI6OXKhKSHt5HZ9i7iYmcuZ7yw
+id: faros_theme_custom_powered
+theme: faros_theme_custom
+region: footer_fifth
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Desenvolvido com Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

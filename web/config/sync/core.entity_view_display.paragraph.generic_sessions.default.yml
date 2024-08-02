@@ -1,0 +1,43 @@
+uuid: 6e2e3bee-4316-4a23-9ce1-80db8cf7a03f
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.generic_sessions.field_content_session
+    - field.field.paragraph.generic_sessions.field_paragraph_image
+    - field.field.paragraph.generic_sessions.field_title
+    - paragraphs.paragraphs_type.generic_sessions
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.generic_sessions.default
+targetEntityType: paragraph
+bundle: generic_sessions
+mode: default
+content:
+  field_content_session:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_paragraph_image:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

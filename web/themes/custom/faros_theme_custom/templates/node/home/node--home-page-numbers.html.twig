@@ -1,0 +1,14 @@
+<section>
+  <div class="col-12 col-lg-12">
+    <div class="row">
+      {% for numbers in content.field_paragraph_numbers["#items"] %}
+      <div class="col-12 col-lg-3">
+        <div class="d-flex flex-column rounded-2 py-5 px-3 bg-body-secondary w-100 h-100" style="background-color:#f2f7f9; font-size:14px;">
+          <h3 class="fw-bold text-primary">{{ numbers.entity.field_title.value }}</h3>{{ numbers.entity.field_subtitle.value }}
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>

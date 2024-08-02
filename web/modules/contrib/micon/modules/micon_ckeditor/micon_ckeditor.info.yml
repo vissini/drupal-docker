@@ -1,0 +1,12 @@
+name: Micon CKEditor
+type: module
+description: Provides the ability to render Micon Icons inside ck editors.
+core_version_requirement: ^9.5 || ^10
+package: Micon
+dependencies:
+  - micon:micon
+
+# Information added by Drupal.org packaging script on 2024-05-21
+version: '2.1.0-beta10'
+project: 'micon'
+datestamp: 1716278966

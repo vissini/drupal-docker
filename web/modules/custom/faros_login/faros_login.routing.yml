@@ -1,0 +1,31 @@
+faros_login.register:
+  path: '/faros-login/register'
+  defaults:
+    _title: 'Register'
+    _form: 'Drupal\faros_login\Form\RegisterForm'
+  requirements:
+    _permission: 'access content'
+
+faros_login.settings:
+  path: '/admin/config/faros/trial-settings'
+  defaults:
+    _title: 'Configurações'
+    _form: 'Drupal\faros_login\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
+
+entity.faros_login_company.settings:
+  path: 'admin/structure/faros-login-company'
+  defaults:
+    _form: '\Drupal\faros_login\Form\CompanySettingsForm'
+    _title: 'Company'
+  requirements:
+    _permission: 'administer faros_login_company'
+
+faros_login.activate:
+  path: '/faros/activate/{uid}/{hash}'
+  defaults:
+    _title: 'Activate Account'
+    _controller: '\Drupal\faros_login\Controller\ActivationController::activate'
+  requirements:
+    _permission: 'access content'

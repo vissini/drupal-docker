@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: pt-br
+uuid: 4b855bda-0f16-4cc5-bbdf-b5fd00b0ffe0
+name: Faros
+mail: gubacelar@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/16
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: pt-br

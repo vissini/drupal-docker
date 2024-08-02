@@ -1,0 +1,23 @@
+uuid: f3e484c4-ef42-4b54-aef4-da34a3560270
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - faros_theme_custom
+id: faros_theme_custom_definicaodemarcadosite
+theme: faros_theme_custom
+region: footer_first
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Footer - Logo Site'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

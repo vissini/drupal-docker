@@ -1,0 +1,15 @@
+uuid: df3ea8bf-81ca-4d32-9f3c-0c645b345cd8
+langcode: pt-br
+status: true
+dependencies: {  }
+name: video
+label: video
+effects:
+  3729936a-bf2d-4818-9af6-2cac693ad32f:
+    uuid: 3729936a-bf2d-4818-9af6-2cac693ad32f
+    id: image_scale
+    weight: 1
+    data:
+      width: 792
+      height: 460
+      upscale: true

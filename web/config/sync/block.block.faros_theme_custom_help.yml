@@ -1,0 +1,22 @@
+uuid: 13c0e279-3869-45a9-ad4e-b14f7ef0db22
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - faros_theme_custom
+_core:
+  default_config_hash: DwMekuLjaeOjSBgAMXEbbdvM0auKYh2Fggc-xokr0yY
+id: faros_theme_custom_help
+theme: faros_theme_custom
+region: highlighted
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ajuda
+  label_display: '0'
+  provider: help
+visibility: {  }

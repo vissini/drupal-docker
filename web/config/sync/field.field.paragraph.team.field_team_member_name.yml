@@ -1,0 +1,19 @@
+uuid: 675a0894-86a6-4d51-8166-697057accd43
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_team_member_name
+    - paragraphs.paragraphs_type.team
+id: paragraph.team.field_team_member_name
+field_name: field_team_member_name
+entity_type: paragraph
+bundle: team
+label: 'Nome do Funcionário'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

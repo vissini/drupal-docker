@@ -1,0 +1,29 @@
+uuid: a142c96f-273a-44ef-b49c-8b7dcc995301
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_desktop_image
+    - media.type.image
+    - paragraphs.paragraphs_type.images_paragraph
+id: paragraph.images_paragraph.field_desktop_image
+field_name: field_desktop_image
+entity_type: paragraph
+bundle: images_paragraph
+label: 'Imagem Desktop'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,32 @@
+<div class="col-12 text-center">
+  <h2 class="fw-bold">{{ content.field_plans_title }}</h2>
+</div>
+<div class="col-12 text-center">
+  <p>{{ content.field_plans_subtitle }}</p>
+</div>
+<div class="col-12 mb-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {% for item in content.field_planos['#items'] %}
+      <div class="col-12">
+        <div class="card card-plans p-3 h-100 bg-white">
+          <div class="card-body">
+            <h4 class="card-title fw-bold">{{ item.entity.title.value }}</h4>
+            <p class="card-text">{{ item.entity.body.value|raw }}</p>
+            <button class="btn btn-primary w-100 text-center mb-3">Fale com um especialista</button>
+            <h5 class="fw-bold">Incluso</h5>
+            <ul class="plan-checklist">
+            {% for topic in item.entity.field_paragraph_topics %}
+              <li>
+                {{topic.entity.field_topic_title.value }}
+                {% if topic.entity.field_topic_description.value %}
+                  <p>{{topic.entity.field_topic_description.value }}</p>
+                {% endif %}
+              </li>
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

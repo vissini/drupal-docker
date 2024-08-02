@@ -1,0 +1,46 @@
+uuid: d4ef4cec-4a9d-4d56-a6f1-c9c731b48949
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_topics
+    - node.type.thematic_axes
+    - paragraphs.paragraphs_type.topics
+  module:
+    - entity_reference_revisions
+id: node.thematic_axes.field_paragraph_topics
+field_name: field_paragraph_topics
+entity_type: node
+bundle: thematic_axes
+label: Tópicos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      topics: topics
+    negate: 0
+    target_bundles_drag_drop:
+      clients:
+        weight: 7
+        enabled: false
+      generic_sessions:
+        weight: 8
+        enabled: false
+      images_paragraph:
+        weight: 9
+        enabled: false
+      team:
+        weight: 10
+        enabled: false
+      testimonials:
+        weight: 11
+        enabled: false
+      topics:
+        weight: 12
+        enabled: true
+field_type: entity_reference_revisions

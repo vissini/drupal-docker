@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - faros_login
+id: faros_login_company_save_action
+label: 'Save companies'
+type: faros_login_company
+plugin: entity:save_action:faros_login_company
+configuration: {  }

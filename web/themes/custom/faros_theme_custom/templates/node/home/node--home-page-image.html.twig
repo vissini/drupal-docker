@@ -1,0 +1,16 @@
+{% set desktop_image = content.field_desktop_image %}
+{% set desktop_image_uri = desktop_image["#items"].entity.get('field_media_image').entity.getFileUri() ?? '' %}
+{% set desktop_image_url = desktop_image_uri ? file_url(desktop_image_uri) : '' %}
+{% set mobile_image = content.field_mobile_image %}
+{% set mobile_image_uri = mobile_image["#items"].entity.get('field_media_image').entity.getFileUri() ?? '' %}
+{% set mobile_image_url = mobile_image_uri ? file_url(mobile_image_uri) : desktop_image_url %}
+{% if desktop_image_url %}
+  <div class="d-none d-md-flex col-12 mb-5 d-flex justify-content-center" style="margin-top: -140px; z-index:999">
+    <img src="{{ desktop_image_url }}" alt="Imagem destaque" class="img-fluid rounded-3">
+  </div>
+{% endif %}
+{% if mobile_image_url %}
+  <div class="d-md-none col-12 mb-5 d-flex justify-content-center" style="margin-top: -60px; z-index:999">
+    <img src="{{ mobile_image_url }}" alt="Imagem destaque" class="img-fluid rounded-3">
+  </div>
+{% endif %}

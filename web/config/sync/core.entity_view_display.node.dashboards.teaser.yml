@@ -1,0 +1,33 @@
+uuid: 8dcc6105-b43b-4de1-be7e-fe016a2002f8
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dashboards.body
+    - field.field.node.dashboards.field_link_power_bi
+    - node.type.dashboards
+  module:
+    - text
+    - user
+id: node.dashboards.teaser
+targetEntityType: node
+bundle: dashboards
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_link_power_bi: true
+  langcode: true

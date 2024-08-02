@@ -1,0 +1,10 @@
+uuid: 889c955f-ea42-4e28-8235-85793a3c6a9d
+langcode: pt-br
+status: true
+dependencies: {  }
+id: why_faros_items
+label: 'Porque Faros Itens'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

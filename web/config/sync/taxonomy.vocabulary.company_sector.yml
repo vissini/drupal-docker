@@ -1,0 +1,9 @@
+uuid: 27bab741-716e-4f17-8685-06be01550b3b
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Setor da Empresa'
+vid: company_sector
+description: null
+weight: 0
+new_revision: false

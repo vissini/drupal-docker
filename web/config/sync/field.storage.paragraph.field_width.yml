@@ -1,0 +1,39 @@
+uuid: 0f4eb12e-787b-4e20-b624-3cf9b42a6b08
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_width
+field_name: field_width
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 1/1
+    -
+      value: '2'
+      label: 1/2
+    -
+      value: '3'
+      label: 1/3
+    -
+      value: '4'
+      label: 1/4
+    -
+      value: '5'
+      label: 2/3
+    -
+      value: '6'
+      label: 3/4
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

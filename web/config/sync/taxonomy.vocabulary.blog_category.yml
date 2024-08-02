@@ -1,0 +1,9 @@
+uuid: 183094cd-87ad-4e78-b53b-14f75bb21838
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Categoria Blog'
+vid: blog_category
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,9 @@
+uuid: fbb93b6b-a505-486c-aef4-d3415101d470
+langcode: pt-br
+status: true
+dependencies: {  }
+name: 'Interesse da Empresa'
+vid: company_interest
+description: null
+weight: 0
+new_revision: false

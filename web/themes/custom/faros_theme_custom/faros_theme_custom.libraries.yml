@@ -1,0 +1,30 @@
+global-styling:
+  version: VERSION
+  js:
+    js/popper.min.js: { weight: -49 }
+    js/bootstrap.min.js: { weight: -48 }
+    js/barrio.js: {}
+    js/custom.js: {}
+  css:
+    component:
+      css/style.css: {}
+    theme:
+      //fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+slick-carousel:
+  version: 1.8.1
+  js:
+    //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js:
+      { type: external, minified: true }
+    js/slick.js: {}
+  css:
+    component:
+      //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css:
+        { type: external, minified: true }
+
+solutions-axes:
+  js:
+    js/solution-axe.js: {}

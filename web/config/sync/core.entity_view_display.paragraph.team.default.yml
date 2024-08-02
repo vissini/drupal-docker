@@ -1,0 +1,40 @@
+uuid: 134076cb-59a9-4625-a25e-5e74bd27d818
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.team.field_image_team_member
+    - field.field.paragraph.team.field_team_member_name
+    - field.field.paragraph.team.field_team_member_position
+    - paragraphs.paragraphs_type.team
+id: paragraph.team.default
+targetEntityType: paragraph
+bundle: team
+mode: default
+content:
+  field_image_team_member:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_team_member_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_team_member_position:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

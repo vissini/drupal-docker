@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions.
+ */
+
+/**
+ * Set the default value for the new variable onlyone_redirect.
+ *
+ * @see https://www.drupal.org/project/onlyone/issues/3104005
+ */
+function onlyone_update_8001() {
+  \Drupal::service('config.factory')->getEditable('onlyone.settings')->set('onlyone_redirect', TRUE)->save();
+}

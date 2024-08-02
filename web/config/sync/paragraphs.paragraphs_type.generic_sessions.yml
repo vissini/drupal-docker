@@ -1,0 +1,10 @@
+uuid: c048b159-01d8-47b6-8e9c-609d5df3c1f1
+langcode: pt-br
+status: true
+dependencies: {  }
+id: generic_sessions
+label: Seções
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

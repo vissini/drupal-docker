@@ -1,0 +1,72 @@
+uuid: 8270b195-909d-4eef-9fd0-183c2c9345d5
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.thematic_axes.body
+    - field.field.node.thematic_axes.field_desktop_image
+    - field.field.node.thematic_axes.field_icon
+    - field.field.node.thematic_axes.field_icon_moon
+    - field.field.node.thematic_axes.field_mobile_image
+    - field.field.node.thematic_axes.field_paragraph_topics
+    - node.type.thematic_axes
+  module:
+    - entity_reference_revisions
+    - micon
+    - text
+    - user
+id: node.thematic_axes.default
+targetEntityType: node
+bundle: thematic_axes
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_desktop_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_icon_moon:
+    type: string_micon
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_mobile_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_paragraph_topics:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_icon: true
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+uuid: e92b80cd-1fdd-4a73-9ea0-48716bddaf09
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - micon
+    - paragraphs
+id: paragraph.field_icon_moon
+field_name: field_icon_moon
+entity_type: paragraph
+type: string_micon
+settings: {  }
+module: micon
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

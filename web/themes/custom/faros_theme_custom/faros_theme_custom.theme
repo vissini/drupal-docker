@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_form_system_theme_settings_alter() for settings form.
+ *
+ * Replace Barrio setting options with subtheme ones.
+ */
+function faros_theme_custom_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['components']['navbar']['bootstrap_barrio_navbar_top_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+  $form['components']['navbar']['bootstrap_barrio_navbar_background']['#options'] = array(
+    'bg-primary' => t('Primary'),
+    'bg-secondary' => t('Secondary'),
+    'bg-light' => t('Light'),
+    'bg-dark' => t('Dark'),
+    'bg-white' => t('White'),
+    'bg-transparent' => t('Transparent'),
+  );
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for field templates.
+ */
+function faros_theme_custom_preprocess_field(array &$variables) {
+  if ($variables["field_name"] != "title") {
+    return;
+  }
+  if (isset($variables['element']['#object']) && $variables['element']['#object'] instanceof \Drupal\node\NodeInterface) {
+    $variables['node'] = $variables['element']['#object'];
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for views_view templates.
+ */
+function faros_theme_custom_preprocess_views_view(&$variables) {
+  if ($variables['view']->id() == 'blog') {
+    // Adicione a tag <h5> às tags permitidas.
+    $variables['view']->element['#title']['#allowed_tags'][] = 'h5';
+  }
+}
+
+/**
+ * Implements hook_form_alter() to change default value of exposed filter.
+ */
+function faros_theme_custom_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+  // Verifique se é o formulário de filtro exposto da view específica.
+  if ($form['#id'] == 'views-exposed-form-blog-page-1') {
+    // Defina o valor padrão do filtro.
+    if (isset($form['field_blog_category_target_id'])) {
+      $form['field_blog_category_target_id']['#options']['All'] = 'Todos os assuntos';
+    }
+  }
+}

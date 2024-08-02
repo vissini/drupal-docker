@@ -1,0 +1,19 @@
+uuid: 03b371cb-7ee7-43cc-9d83-9c95bdb822aa
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_team_member_position
+    - paragraphs.paragraphs_type.team
+id: paragraph.team.field_team_member_position
+field_name: field_team_member_position
+entity_type: paragraph
+bundle: team
+label: 'Cargo do Funcionário'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

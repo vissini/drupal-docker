@@ -1,0 +1,13 @@
+name: Micon Content Type
+type: module
+description: Provides the ability to set icons for content types.
+core_version_requirement: ^9.5 || ^10
+package: Micon
+dependencies:
+  - micon:micon
+  - drupal:node
+
+# Information added by Drupal.org packaging script on 2024-05-21
+version: '2.1.0-beta10'
+project: 'micon'
+datestamp: 1716278966

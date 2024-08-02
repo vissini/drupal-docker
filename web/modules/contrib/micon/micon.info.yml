@@ -1,0 +1,11 @@
+name: Micon
+description: 'An IcoMoon-based icon manager for Drupal.'
+package: Micon
+type: module
+core_version_requirement: ^9.4 || ^10
+configure: entity.micon.collection
+
+# Information added by Drupal.org packaging script on 2024-05-21
+version: '2.1.0-beta10'
+project: 'micon'
+datestamp: 1716278966

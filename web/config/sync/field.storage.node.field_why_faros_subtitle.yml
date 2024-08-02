@@ -1,0 +1,21 @@
+uuid: b2255106-11d8-40de-8dcf-d7862683fbab
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_why_faros_subtitle
+field_name: field_why_faros_subtitle
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

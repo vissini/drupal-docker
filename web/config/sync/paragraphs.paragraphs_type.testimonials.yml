@@ -1,0 +1,10 @@
+uuid: 82701068-999f-4629-8cc4-1c2687a3d115
+langcode: pt-br
+status: true
+dependencies: {  }
+id: testimonials
+label: Depoimentos
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

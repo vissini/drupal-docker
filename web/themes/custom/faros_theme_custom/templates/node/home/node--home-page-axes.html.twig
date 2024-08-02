@@ -1,0 +1,31 @@
+<div class="col-12 text-center fw-bold mt-5 mb-3">
+  <h2 class="fw-bold">{{ node.field_solution_title.value }}</h2>
+</div>
+<div class="col-12 text-center">
+  {{ content.field_video_solucao }}
+</div>
+<div class="col-12">
+  <div class="row">
+    {% for item in node.field_thematic_axes %}
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3">
+        <div class="card h-100" style="background-color: #17aae0;">
+          <div class="card-body text-white d-flex flex-column">
+            {% set field_icon = item.entity.field_icon_moon %}
+            {% if field_icon.value %}
+              <i class="d-block my-3 {{ field_icon.value }}" style="font-size:42px"></i>
+            {% endif %}
+            <h6 class="card-title text-left fw-bold">{{ item.entity.title.value }}</h6>
+            <div class="home-axes-card-text card-text text-left flex-grow-1 text-white">
+              {{ item.entity.body.value|raw }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center mt-3 mb-5 mx-auto">
+    <button class="btn btn-primary py-3 text-uppercase w-100">Conheça a plataforma</button>
+  </div>
+</div>

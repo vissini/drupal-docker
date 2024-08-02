@@ -1,0 +1,17 @@
+faros_login.settings:
+  title: Trial
+  parent: faros_base.settings
+  route_name: faros_login.settings
+  weight: 10
+
+entity.faros_login_company.settings:
+  title: 'Company'
+  description: 'Configure a Company entity type.'
+  route_name:  entity.faros_login_company.settings
+  parent: system.admin_structure
+
+entity.faros_login_company.collection:
+  title: 'Companies'
+  description: 'List of companies.'
+  route_name: entity.faros_login_company.collection
+  parent: system.admin_content

@@ -1,0 +1,28 @@
+uuid: 0d8dc115-a606-4290-bd52-8cebe8974e63
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content_session
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.generic_sessions
+  module:
+    - text
+id: paragraph.generic_sessions.field_content_session
+field_name: field_content_session
+entity_type: paragraph
+bundle: generic_sessions
+label: 'Conteúdo da Seção'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - restricted_html
+    - full_html
+field_type: text_long

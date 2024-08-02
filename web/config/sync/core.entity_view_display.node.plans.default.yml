@@ -1,0 +1,59 @@
+uuid: 863dc896-4773-4791-a2ea-9f4cbaf14121
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.node.plans.body
+    - field.field.node.plans.field_max_user_number
+    - field.field.node.plans.field_paragraph_topics
+    - field.field.node.plans.field_thematic_axes
+    - node.type.plans
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.plans.default
+targetEntityType: node
+bundle: plans
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_max_user_number:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_paragraph_topics:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_thematic_axes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

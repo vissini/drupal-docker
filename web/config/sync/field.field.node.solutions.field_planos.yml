@@ -1,0 +1,29 @@
+uuid: 8818ef50-91fe-40c2-a7b6-a9a324c5d47e
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_planos
+    - node.type.plans
+    - node.type.solutions
+id: node.solutions.field_planos
+field_name: field_planos
+entity_type: node
+bundle: solutions
+label: Pacotes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      plans: plans
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

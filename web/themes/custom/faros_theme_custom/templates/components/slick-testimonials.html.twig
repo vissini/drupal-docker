@@ -1,0 +1,25 @@
+{{ attach_library('faros_theme_custom/slick-carousel') }}
+<div class="slick-carousel-testimonials">
+  {% for item in content.field_paragraph_testimonials['#items'] %}
+    {% set testimony = item.entity.get('field_testimony').value %}
+    {% set personName = item.entity.get('field_person_name').value %}
+    {% set companyName = item.entity.get('field_company_name').value %}
+    {% set icon_media = item.entity.get('field_icon').entity %}
+    {% set icon_file = icon_media ? icon_media.get('field_media_image').entity : null %}
+    {% set icon_uri = icon_file ? icon_file.getFileUri() : '' %}
+    {% set icon_url = icon_uri ? file_url(icon_uri) : '' %}
+    <div class="slide d-flex" style="align-items: stretch;">
+      <div class="card card-testimonial" style="width: 30rem">
+        <div class="card-body">
+          {% if icon_url %}
+            <img class="mb-3" width="32" src="{{ icon_url }}" alt="{{ personName }}" title="{{ personName }}">
+          {% endif %}
+          <p class="card-text">{{ testimony }}</p>
+          <div class="testimonial-person">
+          <h5 class="card-title">{{ personName }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ companyName }}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}

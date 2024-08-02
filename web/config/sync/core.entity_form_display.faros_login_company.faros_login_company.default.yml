@@ -1,0 +1,71 @@
+uuid: 62b3e984-2800-4517-8fb7-28353bb5c94e
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - datetime
+    - faros_login
+id: faros_login_company.faros_login_company.default
+targetEntityType: faros_login_company
+bundle: faros_login_company
+mode: default
+content:
+  cnpj:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  company_interest:
+    type: options_buttons
+    weight: -1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  company_name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  company_sector:
+    type: options_select
+    weight: -3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  company_type:
+    type: options_select
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  plan:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  plan_start_date:
+    type: datetime_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

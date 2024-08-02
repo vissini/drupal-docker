@@ -1,0 +1,20 @@
+uuid: da12cafc-a8eb-4af4-9449-34921a86d462
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_max_user_number
+field_name: field_max_user_number
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 6cdb1f7f-aafb-4d25-afb3-a47401d88e2a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.blog_category
+id: taxonomy_term.blog_category
+target_entity_type_id: taxonomy_term
+target_bundle: blog_category
+default_langcode: site_default
+language_alterable: false

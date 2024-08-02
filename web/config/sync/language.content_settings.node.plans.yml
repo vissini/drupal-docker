@@ -1,0 +1,11 @@
+uuid: a42d436e-d860-4594-8260-f7095ef8ac77
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.plans
+id: node.plans
+target_entity_type_id: node
+target_bundle: plans
+default_langcode: site_default
+language_alterable: false

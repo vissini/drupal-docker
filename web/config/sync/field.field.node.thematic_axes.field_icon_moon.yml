@@ -1,0 +1,21 @@
+uuid: 80ea25c8-760c-4d0a-b618-57aca080ebef
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icon_moon
+    - node.type.thematic_axes
+  module:
+    - micon
+id: node.thematic_axes.field_icon_moon
+field_name: field_icon_moon
+entity_type: node
+bundle: thematic_axes
+label: Ícone
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_micon

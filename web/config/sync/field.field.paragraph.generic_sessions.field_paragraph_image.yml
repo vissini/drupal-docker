@@ -1,0 +1,52 @@
+uuid: 5e10dba4-de62-46fd-8435-cebb05cc124d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_image
+    - paragraphs.paragraphs_type.generic_sessions
+    - paragraphs.paragraphs_type.images_paragraph
+  module:
+    - entity_reference_revisions
+id: paragraph.generic_sessions.field_paragraph_image
+field_name: field_paragraph_image
+entity_type: paragraph
+bundle: generic_sessions
+label: Imagem
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      images_paragraph: images_paragraph
+    negate: 0
+    target_bundles_drag_drop:
+      clients:
+        weight: 6
+        enabled: false
+      generic_sessions:
+        weight: 7
+        enabled: false
+      images_paragraph:
+        weight: 8
+        enabled: true
+      numbers:
+        weight: 12
+        enabled: false
+      team:
+        weight: 9
+        enabled: false
+      testimonials:
+        weight: 10
+        enabled: false
+      topics:
+        weight: 15
+        enabled: false
+      why_faros_items:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

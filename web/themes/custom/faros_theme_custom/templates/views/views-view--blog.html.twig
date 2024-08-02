@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-10">
+    {{ header}}
+  </div>
+</div>
+{% if exposed %}
+  <div class="view-filters">
+    {{ exposed }}
+  </div>
+{% endif %}
+<div class="row">
+  <div class="col-12">
+  {{ rows }}
+  </div>
+</div>
+{% if pager %}
+  {{ pager }}
+{% endif %}
+{% if more %}
+  {{ more }}
+{% endif %}
+{% if footer %}
+  <div class="view-footer">
+    {{ footer }}
+  </div>
+{% endif %}
+<div class="mb-5"></div>

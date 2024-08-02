@@ -1,0 +1,42 @@
+uuid: ca4196ad-74a9-4562-9b07-646d6e2a50c7
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.thematic_axes.body
+    - field.field.node.thematic_axes.field_desktop_image
+    - field.field.node.thematic_axes.field_icon
+    - field.field.node.thematic_axes.field_icon_moon
+    - field.field.node.thematic_axes.field_mobile_image
+    - field.field.node.thematic_axes.field_paragraph_topics
+    - node.type.thematic_axes
+  module:
+    - text
+    - user
+id: node.thematic_axes.teaser
+targetEntityType: node
+bundle: thematic_axes
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_desktop_image: true
+  field_icon: true
+  field_icon_moon: true
+  field_mobile_image: true
+  field_paragraph_topics: true
+  langcode: true
+  search_api_excerpt: true

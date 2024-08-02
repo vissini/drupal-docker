@@ -1,0 +1,7 @@
+services:
+  faros_base.form_helper:
+    class: Drupal\faros_base\Services\FormHelper
+
+  faros_base.content_loader_service:
+    class: Drupal\faros_base\Services\ContentLoaderService
+    arguments: ['@entity_type.manager']

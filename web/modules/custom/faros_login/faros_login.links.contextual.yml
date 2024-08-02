@@ -1,0 +1,10 @@
+entity.faros_login_company.edit_form:
+  route_name: entity.faros_login_company.edit_form
+  group: faros_login_company
+  title: 'Edit'
+
+entity.faros_login_company.delete_form:
+  route_name: entity.faros_login_company.delete_form
+  group: faros_login_company
+  title: 'Delete'
+  weight: 10

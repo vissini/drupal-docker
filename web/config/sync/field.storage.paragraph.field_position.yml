@@ -1,0 +1,30 @@
+uuid: a02ff8f3-04c7-4ece-9e7e-079ac3369142
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_position
+field_name: field_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: left
+      label: Esquerda
+    -
+      value: right
+      label: Direita
+    -
+      value: center
+      label: Centro
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

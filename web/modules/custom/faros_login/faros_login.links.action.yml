@@ -1,0 +1,5 @@
+faros_login_company.add_form:
+  title: 'Add company'
+  route_name: entity.faros_login_company.add_form
+  appears_on:
+    - entity.faros_login_company.collection

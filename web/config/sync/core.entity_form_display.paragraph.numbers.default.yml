@@ -1,0 +1,32 @@
+uuid: 432ee9a7-8279-4a96-9901-8d5e50a22d5b
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.numbers.field_subtitle
+    - field.field.paragraph.numbers.field_title
+    - paragraphs.paragraphs_type.numbers
+id: paragraph.numbers.default
+targetEntityType: paragraph
+bundle: numbers
+mode: default
+content:
+  field_subtitle:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

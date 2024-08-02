@@ -1,0 +1,10 @@
+uuid: dd6f4808-f9fb-4b0d-9ec8-5196a6b9662f
+langcode: pt-br
+status: true
+dependencies: {  }
+id: team
+label: Equipe
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

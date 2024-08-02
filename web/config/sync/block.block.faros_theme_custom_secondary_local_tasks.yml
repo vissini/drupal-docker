@@ -1,0 +1,22 @@
+uuid: 4dcac34e-27b0-4f8f-bb8a-a1c61eafb15a
+langcode: pt-br
+status: true
+dependencies:
+  theme:
+    - faros_theme_custom
+_core:
+  default_config_hash: tMa1jdeQpit8bFX72y39RCVnKTI8-dZyOGkmvAgGLZY
+id: faros_theme_custom_secondary_local_tasks
+theme: faros_theme_custom
+region: content
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Abas secundárias'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

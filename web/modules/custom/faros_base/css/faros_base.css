@@ -1,0 +1,18 @@
+.toolbar .toolbar-icon::before {
+  position: absolute;
+  top: 0;
+  left: 0.6667em;
+  display: block;
+  width: 1.25rem;
+  height: 100%;
+  content: "";
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: 100% auto;
+}
+
+.toolbar-icon.toolbar-icon-faros-base-settings::before {
+  background-image: url('../images/faros_icon.png');
+}

@@ -1,0 +1,19 @@
+uuid: 3f0a2759-59af-470e-8b93-63fd415a7467
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.home_page
+id: node.home_page.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: home_page
+label: Subtítulo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

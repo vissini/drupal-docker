@@ -1,0 +1,11 @@
+uuid: 915fb6a2-0509-41e2-8380-97816a0f01f1
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image
+target_entity_type_id: media
+target_bundle: image
+default_langcode: site_default
+language_alterable: false

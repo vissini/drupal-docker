@@ -1,0 +1,11 @@
+uuid: 8be06bf6-f1ef-4a44-8ec8-353bb44d1b36
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.institutional
+id: node.institutional
+target_entity_type_id: node
+target_bundle: institutional
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+{{ attach_library('faros_theme_custom/slick-carousel') }}
+{% if title %}
+  <h2 class="fw-bold">{{ title }}</h2>
+{% endif %}
+<div class="slick-carousel-blog-row">
+    {% for row in rows %}
+      {%
+        set row_classes = [
+          default_row_class ? 'views-row',
+        ]
+      %}
+      {% set fields = row.content['#row']._entity %}
+        {% if fields.hasField('field_desktop_image') and fields.field_desktop_image.entity %}
+          {% set image = fields.field_desktop_image.entity %}
+          {% if image.hasField('field_media_image') and image.get('field_media_image').entity %}
+            {% set image_file = image.get('field_media_image').entity %}
+            {% set image_uri = image_file.getFileUri() %}
+            {% set image_url = image_uri ? file_url(image_uri) : '' %}
+          {% else %}
+            {# Lide com o caso em que o campo field_media_image não está presente. #}
+            {% set image_url = '' %}
+          {% endif %}
+        {% else %}
+          {# Lide com o caso em que o campo field_desktop_image não está presente. #}
+          {% set image_url = '' %}
+        {% endif %}
+        <div class="slide">
+          <div class="card card-news">
+            <div class="position-relative">
+              {% if image_url %}
+                <img src="{{ image_url }}" alt="{{ loop.index }}" class="card-img-top img-fluid">
+              {% endif %}
+              {% if fields.field_blog_category.entity.name.value %}
+                <div class="category-tag position-absolute bg-purple text-white p-1 rounded">
+                  {{ fields.field_blog_category.entity.name.value }}
+                </div>
+              {% endif %}
+            </div>
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div>
+                <p class="card-title fw-bold">{{ fields.title.value }}</p>
+              </div>
+              <a href="#" class="btn btn-primary mt-auto">Saiba mais</a>
+            </div>
+          </div>
+        </div>
+    {% endfor %}
+</div>

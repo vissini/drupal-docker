@@ -1,0 +1,13 @@
+name: Allow a content type only once (Only One)
+description: Allows Only One node per content type and language.
+package: Content
+
+type: module
+core_version_requirement: ^8.7.7 || ^9.0 || ^10.0
+
+configure: onlyone.admin_settings
+
+# Information added by Drupal.org packaging script on 2023-04-24
+version: '2.0.0'
+project: 'onlyone'
+datestamp: 1682358764

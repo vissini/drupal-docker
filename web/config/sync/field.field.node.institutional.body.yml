@@ -1,0 +1,24 @@
+uuid: 72b66a20-4b24-4746-a17f-2d87384c97d7
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.institutional
+  module:
+    - text
+id: node.institutional.body
+field_name: body
+entity_type: node
+bundle: institutional
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

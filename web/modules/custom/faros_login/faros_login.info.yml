@@ -1,0 +1,9 @@
+name: 'Faros Login'
+type: module
+description: 'A module to handle Faros login'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - faros_base
+'interface translation project': faros_login
+'interface translation server pattern': modules/custom/faros_login/translations/%language.po

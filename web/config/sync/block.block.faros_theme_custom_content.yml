@@ -1,0 +1,22 @@
+uuid: f053a692-4f5b-4b10-b868-c0edc988c1c9
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - faros_theme_custom
+_core:
+  default_config_hash: O4Uf5zd9IsCxI9sMkyXPa-6qqF72sDLrIYSLHMIjfAI
+id: faros_theme_custom_content
+theme: faros_theme_custom
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Conteúdo da página principal'
+  label_display: '0'
+  provider: system
+visibility: {  }

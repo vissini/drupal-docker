@@ -1,0 +1,19 @@
+uuid: c8585023-e575-460c-9d82-97c004ae3e25
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_why_faros_subtitle
+    - node.type.home_page
+id: node.home_page.field_why_faros_subtitle
+field_name: field_why_faros_subtitle
+entity_type: node
+bundle: home_page
+label: 'Porque Faros Subtítulo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

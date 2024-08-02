@@ -1,0 +1,140 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: pt_BR\n"
+
+msgid "Name"
+msgstr "Nome"
+
+msgid "Lastname"
+msgstr "Sobrenome"
+
+msgid "Password"
+msgstr "Senha"
+
+msgid "Password Confirmation"
+msgstr "Confirmação de Senha"
+
+msgid "At least 8 characters"
+msgstr "Pelo menos 8 caracteres"
+
+msgid "One uppercase letter"
+msgstr "Uma letra maiúscula"
+
+msgid "One lowercase letter"
+msgstr "Uma letra minúscula"
+
+msgid "One number"
+msgstr "Um número"
+
+msgid "One special character (@$!%*?&)"
+msgstr "Um caractere especial (@$!%*?&)"
+
+msgid "Telephone"
+msgstr "Telefone"
+
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "I agree to the terms and privacy policy"
+msgstr "Eu concordo com os termos e a política de privacidade"
+
+msgid "Company Name"
+msgstr "Nome da Empresa"
+
+msgid "Company Type"
+msgstr "Tipo de Empresa"
+
+msgid "Type 1"
+msgstr "Tipo 1"
+
+msgid "Type 2"
+msgstr "Tipo 2"
+
+msgid "Type 3"
+msgstr "Tipo 3"
+
+msgid "Company Sector"
+msgstr "Setor da Empresa"
+
+msgid "Sector 1"
+msgstr "Setor 1"
+
+msgid "Sector 2"
+msgstr "Setor 2"
+
+msgid "Sector 3"
+msgstr "Setor 3"
+
+msgid "Position"
+msgstr "Cargo"
+
+msgid "Company Interest"
+msgstr "Interesse da Empresa"
+
+msgid "Interest 1"
+msgstr "Interesse 1"
+
+msgid "Interest 2"
+msgstr "Interesse 2"
+
+msgid "Interest 3"
+msgstr "Interesse 3"
+
+msgid "Voltar Etapa"
+msgstr "Voltar Etapa"
+
+msgid "Iniciar Cadastro"
+msgstr "Iniciar Cadastro"
+
+msgid "Finalizar Cadastro"
+msgstr "Finalizar Cadastro"
+
+msgid "Password Requirements"
+msgstr "Requisitos da Senha"
+
+msgid "Ok, I understand"
+msgstr "Ok, eu entendo"
+
+msgid "Password confirmation does not match."
+msgstr "A confirmação de senha não corresponde."
+
+msgid "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&)."
+msgstr "A senha deve ter pelo menos 8 caracteres e conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caractere especial (@$!%*?&)."
+
+msgid "You must agree to the terms and privacy policy."
+msgstr "Você deve concordar com os termos e a política de privacidade."
+
+msgid "The registration has been completed successfully."
+msgstr "O cadastro foi concluído com sucesso."
+
+msgid "Company"
+msgstr "Empresa"
+
+msgid "company"
+msgstr "empresa"
+
+msgid "Companies"
+msgstr "Empresas"
+
+msgid "Add company"
+msgstr "Adicionar Empresa"
+
+msgid "Plan"
+msgstr "Plano"
+
+msgid "Plan Start Date"
+msgstr "Data de início do Plano"
+
+msgid "Active"
+msgstr "Habilitado"
+
+msgid "Inactive"
+msgstr "Desabilitado"
+
+msgid "Suspended"
+msgstr "Suspenso"
+

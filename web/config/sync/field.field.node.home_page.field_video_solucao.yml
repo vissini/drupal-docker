@@ -1,0 +1,29 @@
+uuid: 45292d47-abe5-43a0-8892-f37816792276
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_solucao
+    - media.type.remote_video
+    - node.type.home_page
+id: node.home_page.field_video_solucao
+field_name: field_video_solucao
+entity_type: node
+bundle: home_page
+label: 'Video Solução'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      remote_video: remote_video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: a8e55393-808d-42bf-9e87-3c9f920c94db
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.thematic_axes
+id: node.thematic_axes.promote
+field_name: promote
+entity_type: node
+bundle: thematic_axes
+label: 'Promovido para a página inicial'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Habilitado
+  off_label: Desligado
+field_type: boolean

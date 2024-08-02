@@ -1,0 +1,11 @@
+uuid: 8833ea8e-1110-45d2-b007-096602da73a9
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.dashboards
+id: node.dashboards
+target_entity_type_id: node
+target_bundle: dashboards
+default_langcode: site_default
+language_alterable: false

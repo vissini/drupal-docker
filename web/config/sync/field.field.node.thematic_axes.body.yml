@@ -1,0 +1,24 @@
+uuid: be80ac1a-3a64-43c8-bdf0-9437fc1d19ca
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.thematic_axes
+  module:
+    - text
+id: node.thematic_axes.body
+field_name: body
+entity_type: node
+bundle: thematic_axes
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

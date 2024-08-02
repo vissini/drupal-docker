@@ -1,0 +1,8 @@
+uuid: b89f0b7e-2ad6-41b3-8310-027281f52ae0
+langcode: pt-br
+status: true
+dependencies: {  }
+id: footer---main
+label: 'Footer - Main'
+description: 'Footer links'
+locked: false

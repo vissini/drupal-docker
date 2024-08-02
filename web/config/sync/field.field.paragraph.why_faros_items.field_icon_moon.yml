@@ -1,0 +1,21 @@
+uuid: 862a2780-5e8a-4087-8144-aa0ed7f48e0a
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_moon
+    - paragraphs.paragraphs_type.why_faros_items
+  module:
+    - micon
+id: paragraph.why_faros_items.field_icon_moon
+field_name: field_icon_moon
+entity_type: paragraph
+bundle: why_faros_items
+label: Ícone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_micon

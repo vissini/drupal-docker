@@ -1,0 +1,10 @@
+uuid: 67358f56-3204-4da9-b37e-4dd4936ebb41
+langcode: pt-br
+status: true
+dependencies: {  }
+id: numbers
+label: 'Faros em Números'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

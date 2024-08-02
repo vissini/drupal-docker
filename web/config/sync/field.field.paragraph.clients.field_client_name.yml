@@ -1,0 +1,19 @@
+uuid: 8238eb11-fd9e-473e-b68c-f65a85170f45
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_client_name
+    - paragraphs.paragraphs_type.clients
+id: paragraph.clients.field_client_name
+field_name: field_client_name
+entity_type: paragraph
+bundle: clients
+label: 'Nome do Cliente'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

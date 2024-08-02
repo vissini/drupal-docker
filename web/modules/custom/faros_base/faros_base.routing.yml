@@ -1,0 +1,15 @@
+faros_base.settings:
+  path: "/admin/faros"
+  defaults:
+    _controller: \Drupal\system\Controller\SystemController::systemAdminMenuBlockPage
+    _title: "Faros Settings"
+  requirements:
+    _role: "administrator"
+
+faros_base.expert_contact_settings:
+  path: '/admin/config/faros/fale-especialista-settings'
+  defaults:
+    _form: '\Drupal\faros_base\Form\ExpertContactSettingsForm'
+    _title: 'Fale com Especialista Settings'
+  requirements:
+    _permission: 'administer site configuration'

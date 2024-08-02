@@ -1,0 +1,11 @@
+uuid: d90987e2-c21f-470b-bfb8-0d73c1967ff3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - node.type.home_page
+id: node.home_page
+target_entity_type_id: node
+target_bundle: home_page
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - faros_login
+id: faros_login_company_delete_action
+label: 'Delete companies'
+type: faros_login_company
+plugin: entity:delete_action:faros_login_company
+configuration: {  }

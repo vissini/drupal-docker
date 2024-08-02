@@ -1,0 +1,112 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+<div class="col-12 mb-5">
+  <div class="row blog-list-row mb-5">
+    {% for row in rows %}
+      {%
+        set row_classes = [
+          default_row_class ? 'views-row',
+        ]
+      %}
+      {% set fields = row.content['#row']._entity %}
+      {% if fields.hasField('field_desktop_image') and fields.field_desktop_image.entity %}
+        {% set image = fields.field_desktop_image.entity %}
+        {% if image.hasField('field_media_image') and image.get('field_media_image').entity %}
+          {% set image_file = image.get('field_media_image').entity %}
+          {% set image_uri = image_file.getFileUri() %}
+          {% set image_url = image_uri ? file_url(image_uri) : '' %}
+        {% else %}
+          {# Lide com o caso em que o campo field_media_image não está presente. #}
+          {% set image_url = '' %}
+        {% endif %}
+      {% else %}
+        {# Lide com o caso em que o campo field_desktop_image não está presente. #}
+        {% set image_url = '' %}
+      {% endif %}
+
+      {% if loop.index == 1 %}
+        <div class="col-12 col-lg-8 mt-3">
+          <div class="card card-news h-100 position-relative d-flex" style="min-height: 300px;">
+            <div class="bg-image flex-grow-1" style="background-image: url('{{ image_url }}');">
+              <div class="overlay d-flex align-items-end">
+                <div class="bg-white mx-4 my-3 p-3 d-flex justify-content-between w-100 rounded">
+                  <div class="text-black">
+                    {% if fields.field_blog_category.entity.name.value %}
+                      {% set background_color = fields.field_blog_category.entity.field_background.value.0.color ?? 'red' %}
+                      <div class="category-tag p-1 mb-3 rounded d-inline-block" style="background-color:{{ background_color }}">
+                        {{ fields.field_blog_category.entity.name.value }}
+                      </div>
+                    {% endif %}
+                    <p class="card-title fw-bold mb-0">{{ fields.title.value }}</p>
+                  </div>
+                  <div class="icon ms-3">
+                    <i class="iconmoon-arrow-circle-right text-primary" style="font-size:36px"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% else %}
+        {% if loop.index == 2 %}
+        <div class="col-12 col-lg-4 d-flex flex-column">
+        {% endif %}
+          <div class="card card-news flex-grow-1 mt-3 d-flex">
+            <div class="position-relative overflow-hidden flex-grow-1 d-flex">
+              <div class="m-3 p-3 d-flex justify-content-between w-100 align-items-center bg-white rounded">
+                <div class="text-black">
+                  {% if fields.field_blog_category.entity.name.value %}
+                    {% set background_color = fields.field_blog_category.entity.field_background.value.0.color ?? 'red' %}
+                    <div class="category-tag p-1 mb-3 rounded d-inline-block" style="background-color:{{ background_color }}">
+                      {{ fields.field_blog_category.entity.name.value }}
+                    </div>
+                  {% endif %}
+                  <p class="card-title fw-bold mb-0">{{ fields.title.value }}</p>
+                </div>
+                <div class="icon ms-3">
+                  <i class="iconmoon-arrow-circle-right text-primary" style="font-size:36px"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% if loop.index == 3 %}
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+</style>

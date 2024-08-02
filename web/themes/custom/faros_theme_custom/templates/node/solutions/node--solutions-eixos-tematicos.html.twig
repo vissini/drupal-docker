@@ -1,0 +1,42 @@
+{{ attach_library('faros_theme_custom/solutions-axes') }}
+<div class="col-12 fw-bold mb-3">
+  <h2 class="fw-bold">{{ content.field_thematic_axes_title }}</h2>
+</div>
+<div class="col-12 col-md-6">
+  <div class="row">
+    {% set active = "active" %}
+    {% set icon_color = "text-white" %}
+    {% for item in node.field_thematic_axes %}
+      {% if loop.index > 1 %}
+        {% set active = "" %}
+        {% set icon_color = "text-secondary" %}
+      {% endif %}
+      <div class="col-6 col-md-4">
+        <div class="card card-axe px-3 py-4 mb-3 text-center {{active}}">
+          <a href="javascript:void()" class="btn-axe text-white" id="{{item.target_id}}">
+          {% set field_icon = item.entity.field_icon_moon %}
+          {% if field_icon.value %}
+            <i class="{{ field_icon.value }}"></i>
+          {% endif %}
+          <div class="card-body">
+            <h6 class="card-title text-center">{{ item.entity.title.value }}</h6>
+          </div>
+          </a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="col-12 col-md-6">
+  {% for item in node.field_thematic_axes %}
+    {% set display = "d-block" %}
+    {% if loop.index > 1 %}
+      {% set display = "d-none" %}
+    {% endif %}
+    <div class="{{display}} result-axe" id="result-{{ item.target_id }}">
+      <h4>{{ item.entity.title.value }}</h4>
+      {{ item.entity.body.value|raw }}
+    </div>
+  {% endfor %}
+  <button class="btn btn-primary px-5 py-2">FALAR COM UM ESPECIALISTA</button>
+</div>

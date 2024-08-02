@@ -1,0 +1,95 @@
+/* VARIABLES */
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// colors
+$primary-shade: #17AAE0;
+$primary-light: tint-color($primary-shade, 37%);
+$primary-dark: shade-color($primary-shade, 12%);
+$accent-shade: #0066cc;
+$accent-light: tint-color($accent-shade, 37%);
+$accent-dark: shade-color($accent-shade, 12%);
+// Reassign color vars to semantic color scheme
+$red: #dc3545;
+$yellow: #ffd700;
+$green: #28a745;
+$cyan: #17a2b8;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-800: #343a40;
+
+$color1_faros: #17AAE0;
+$color2_faros: #119ED4;
+$color3_faros: #095DA8;
+
+// scss-docs-start theme-color-variables
+$primary:       $accent-shade;
+$secondary:     $primary-shade;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$brand-primary: $accent-shade;
+$light:         $gray-100;
+$dark:          $gray-800;
+//$brand-success: $green;
+//$brand-info: $teal;
+//$brand-warning: $orange;
+//$brand-danger: $red;
+$brand-inverse: $primary-shade;
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg: $white;
+$body-color: $gray-800;
+$inverse-bg: $primary-shade;
+$inverse-color: $white;
+// Links
+//
+// Style anchor elements.
+//$link-color: $accent-shade;
+$link-decoration: none;
+//$link-hover-color: $accent-dark;
+//$link-hover-decoration: underline;
+// Comments
+$comment-spacer-x: 1.25em;
+$comment-spacer-y: 1.25em;
+// Responsive font sizes
+$enable-responsive-font-sizes: true;
+$enable-shadows: false;
+$enable-gradients: false;
+// Breadcrumbs (Works only on Bootstrap 5+)
+// $breadcrumb-divider: quote(">");
+$enable-caret: true;
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+// Before and after width for full width components
+$pseudo-element-width: (
+  sm: calc((100vw - map-get($container-max-widths, sm)) /2 ),
+  md: calc((100vw - map-get($container-max-widths, md)) /2 ),
+  lg: calc((100vw - map-get($container-max-widths, lg)) /2 ),
+  xl: calc((100vw - map-get($container-max-widths, xl)) /2 ),
+  xxl: calc((100vw - map-get($container-max-widths, xxl)) /2 )
+);
+
+// Value left and right for full width components.
+$pseudo-element-position: (
+  sm: calc(-1 * (100vw - map-get($container-max-widths, sm)) /2 ),
+  md: calc(-1 * (100vw - map-get($container-max-widths, md)) /2 ),
+  lg: calc(-1 * (100vw - map-get($container-max-widths, lg)) /2 ),
+  xl: calc(-1 * (100vw - map-get($container-max-widths, xl)) /2 ),
+  xxl: calc(-1 * (100vw - map-get($container-max-widths, xxl)) /2 )
+);
+
+$h1-font-size: 60px;
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");

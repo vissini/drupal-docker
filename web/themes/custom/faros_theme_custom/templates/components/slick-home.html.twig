@@ -1,0 +1,16 @@
+{{ attach_library('faros_theme_custom/slick-carousel') }}
+<div class="slick-carousel-home">  
+    {% set sliders = 10 %}
+    {% for i in range(1, sliders) %}
+        <div class="slide">
+            <div class="w-100 rounded-3 card-news">
+                <img src="https://placehold.co/285x200" alt="{{ loop.index }}" class="img-fluid rounded-top-4">
+
+                <div class="p-4">
+                    <p class="fw-bold">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <a href="#" class="btn">Saiba mais</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

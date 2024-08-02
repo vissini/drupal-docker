@@ -1,0 +1,19 @@
+uuid: 1b9ec43e-abc9-4052-a8f2-e3a150d72ccc
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_thematic_axes_subtitle
+    - node.type.solutions
+id: node.solutions.field_thematic_axes_subtitle
+field_name: field_thematic_axes_subtitle
+entity_type: node
+bundle: solutions
+label: 'Subtítulo Eixos Temáticos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

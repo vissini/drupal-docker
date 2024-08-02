@@ -1,0 +1,19 @@
+uuid: df059d88-c1f5-4905-a997-164921975613
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topic_description
+    - paragraphs.paragraphs_type.topics
+id: paragraph.topics.field_topic_description
+field_name: field_topic_description
+entity_type: paragraph
+bundle: topics
+label: 'Descrição do Tópico'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

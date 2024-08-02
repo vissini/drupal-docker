@@ -1,0 +1,23 @@
+uuid: 87da1863-c7cd-4a19-b933-7741d8736457
+langcode: pt-br
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - faros_theme_custom
+_core:
+  default_config_hash: Xkrao4w-TRJFQuLywO4HrEEARQPNXOSOMdy-MjPw2F0
+id: faros_theme_custom_search_form_narrow
+theme: faros_theme_custom
+region: sidebar_first
+weight: -7
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulário de busca (estreito)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

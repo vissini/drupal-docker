@@ -1,0 +1,21 @@
+uuid: 8ab9e4ad-9ffd-4333-9655-17aa41ad9ced
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - node
+    - paragraphs
+id: node.field_paragraph_teams
+field_name: field_paragraph_teams
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

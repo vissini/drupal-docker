@@ -1,0 +1,14 @@
+name: Micon Menu
+type: module
+description: Provides the ability to set icons for menu link content.
+core_version_requirement: ^9.5 || ^10
+package: Micon
+dependencies:
+  - drupal:menu_link_content
+  - drupal:menu_ui
+  - micon:micon_link
+
+# Information added by Drupal.org packaging script on 2024-05-21
+version: '2.1.0-beta10'
+project: 'micon'
+datestamp: 1716278966

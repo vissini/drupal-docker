@@ -1,0 +1,52 @@
+uuid: fa540344-d9bb-4607-a100-ade58c00b6a2
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_session
+    - node.type.institutional
+    - paragraphs.paragraphs_type.generic_sessions
+  module:
+    - entity_reference_revisions
+id: node.institutional.field_paragraph_session
+field_name: field_paragraph_session
+entity_type: node
+bundle: institutional
+label: 'Seções - Itens'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      generic_sessions: generic_sessions
+    negate: 0
+    target_bundles_drag_drop:
+      clients:
+        weight: 7
+        enabled: false
+      generic_sessions:
+        weight: 8
+        enabled: true
+      images_paragraph:
+        weight: 9
+        enabled: false
+      numbers:
+        weight: 12
+        enabled: false
+      team:
+        weight: 10
+        enabled: false
+      testimonials:
+        weight: 11
+        enabled: false
+      topics:
+        weight: 12
+        enabled: false
+      why_faros_items:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions
